@@ -1,0 +1,6 @@
+user_answers:
+  start_message: "добро пожаловать"
+  add_color_message: "Выберите цвет"
+  add_size_message: "Ввдите размер с клавиатуры s/m/l/xxl"
+  add_coverage_message: "Нужно ли покрытие?"
+  final_message: "финальная стоимость {price}"
