@@ -4,3 +4,6 @@ user_answers:
   add_size_message: "Ввдите размер с клавиатуры s/m/l/xxl"
   add_coverage_message: "Нужно ли покрытие?"
   final_message: "финальная стоимость {price}"
+  add_color_error: "нет такого цвета"
+  add_size_error: "нет такого размера"
+  add_coverage_error: "нет такого варианта ответа"

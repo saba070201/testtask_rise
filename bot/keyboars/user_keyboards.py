@@ -13,10 +13,9 @@ color_kb = ReplyKeyboardMarkup(
     ],
     resize_keyboard=True,
 )
-coverage_keyboard = ReplyKeyboardMarkup(
-    keyboard=[
-        [KeyboardButton(text="да")],
-        [KeyboardButton(text="нет")],
+coverage_keyboard = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [InlineKeyboardButton(text="да", callback_data="yes")],
+        [InlineKeyboardButton(text="нет", callback_data="no")],
     ],
-    resize_keyboard=True,
 )

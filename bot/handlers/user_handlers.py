@@ -46,11 +46,13 @@ async def handle_message(message: Message, state: FSMContext):
     )
 
 
-@user_router.message(table_states.TableState.add_coverage, user_filters.IsCoverage())
-async def handle_message(message: Message, state: FSMContext):
-    await state.update_data(add_coverage=message.text)
+@user_router.callback_query(
+    table_states.TableState.add_coverage, user_filters.IsCoverage()
+)
+async def handle_callback(callback: CallbackQuery, state: FSMContext, answer: str):
+    await state.update_data(add_coverage=answer)
     data = await state.get_data()
-    await message.answer(
+    await callback.message.answer(
         text=str(DIALOG_SCENARIO["user_answers"]["final_message"]).format(
             price=calculate_price(data, PRICE_LIST)
         ),
